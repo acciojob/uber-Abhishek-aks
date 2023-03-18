@@ -9,7 +9,7 @@ public class Cab {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String perKmRate;
+    private int perKmRate;
     private Boolean available;
 
     // maping tables
@@ -20,10 +20,10 @@ public class Cab {
     // Constructor
     public Cab(){
     }
-    public Cab(String perKmRate) {
+    public Cab(int perKmRate) {
         this.perKmRate = perKmRate;
     }
-    public Cab(int id, String perKmRate ,Boolean available) {
+    public Cab(int id, int perKmRate ,Boolean available) {
         this.id = id;
         this.perKmRate = perKmRate;
         this.available = available;
@@ -38,10 +38,10 @@ public class Cab {
         this.id = id;
     }
 
-    public String getPerKmRate() {
+    public int getPerKmRate() {
         return perKmRate;
     }
-    public void setPerKmRate(String perKmRate) {
+    public void setPerKmRate(int perKmRate) {
         this.perKmRate = perKmRate;
     }
 
